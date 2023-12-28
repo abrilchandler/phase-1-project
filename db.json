@@ -1,0 +1,22 @@
+{
+    "horses": [
+      {
+        "name": "Test",
+        "breed": "Arabian",
+        "color": "brown"
+      },
+      {
+        "name": "Test2",
+        "breed": "Arabian",
+        "color": "white"
+      }
+    ],
+    "ferriers": [
+      {
+        "name": "test1"
+      },
+      {
+        "name": "ferrier2"
+      }
+    ]
+  }
