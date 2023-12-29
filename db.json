@@ -1,22 +1,38 @@
 {
     "horses": [
       {
-        "name": "Test",
-        "breed": "Arabian",
+        "name": "Presley",
+        "breed": "American Paint Horse",
+        "color": "white and brown"
+      },
+      {
+        "name": "George",
+        "breed": "POA",
+        "color": "white speckled"
+      },
+      {
+        "name": "Santana",
+        "breed": "American Paint Horse",
         "color": "brown"
       },
       {
-        "name": "Test2",
-        "breed": "Arabian",
-        "color": "white"
+        "name": "Franny",
+        "breed": "POA",
+        "color": "red"
       }
     ],
-    "ferriers": [
+    "farriers": [
       {
-        "name": "test1"
+        "name": "farrier1"
       },
       {
-        "name": "ferrier2"
+        "name": "farrier2"
+      },
+      {
+        "name": "farrier3"
+      },
+      {
+        "name": "farrier4"
       }
     ]
   }
