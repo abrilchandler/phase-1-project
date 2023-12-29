@@ -1,6 +1,5 @@
 
   document.addEventListener("DOMContentLoaded", () => {
-    const searchValue = document.getElementById("search").value;
     const form = document.getElementById("barn-form");
     form.addEventListener("submit", (event) => searchHorse(event));
     const dropdown = document.getElementById("myDropdown");
@@ -9,8 +8,6 @@
   });
   
   function searchBarn(event) {
-    
-  
     event.preventDefault();
   
     fetch(
@@ -44,21 +41,24 @@
     });
   }
   
-  function searchHorse(searchString) {
-
+  function searchHorse(event) {
     event.preventDefault();
-
-    fetch(`http://localhost:3000/horses?name=${searchString}`, {
+    const searchValue = document.getElementById("search").value;
+    fetch(`http://localhost:3000/horses?name=${searchValue}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/vnd.github.v3+json",
       },
     })
       .then((resp) => resp.json())
-      .then((json) => console.log(json));
+      .then((json) => displaySingleHorse(json[0]));
   }
   
+  function displaySingleHorse(horseData) {
+    const singleHorse = document.getElementById("horse-results");
+    singleHorse.innerHTML = `<p>Name: ${horseData.name}</p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p>`
+    // find a place on the page and create a new element and put the horse data into that element to display it
+  }
 
   
   function handleDropdown(selection) {
