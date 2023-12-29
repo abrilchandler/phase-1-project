@@ -1,14 +1,15 @@
 
   document.addEventListener("DOMContentLoaded", () => {
+    const searchValue = document.getElementById("search").value;
     const form = document.getElementById("barn-form");
-    form.addEventListener("submit", (event) => searchBarn(event));
+    form.addEventListener("submit", (event) => searchHorse(event));
     const dropdown = document.getElementById("myDropdown");
   
     document.addEventListener("change", () => handleDropdown(dropdown.value));
   });
   
   function searchBarn(event) {
-    const searchValue = document.getElementById("search").value;
+    
   
     event.preventDefault();
   
@@ -26,7 +27,8 @@
       .then((json) => {
         const horseList = document.getElementById("results-list");
         horseList.innerHTML = "";
-        displayBarn(json.items);
+        console.log(json)
+        displayBarn(json);
         console.log(horseList)
         const form = document.getElementById("result-form");
         form.reset();
@@ -37,13 +39,16 @@
     const horseList = document.getElementById("barn-list");
     horses.forEach((horse) => {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="${horse.html_url}">${horse.login}</a>`;
+      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}</p>`;
       horseList.appendChild(li);
     });
   }
   
-  function searchRepo(searchString) {
-    fetch(`http://localhost:3000/horses/${searchString}`, {
+  function searchHorse(searchString) {
+
+    event.preventDefault();
+
+    fetch(`http://localhost:3000/horses?name=${searchString}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -54,20 +59,7 @@
       .then((json) => console.log(json));
   }
   
-  function postRepo(searchString) {
-    fetch(`http://localhost:3000/horses/${searchString}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/vnd.github.v3+json",
-      },
-      body: JSON.stringify({
-        searchString: "horses",
-      }),
-    })
-      .then((resp) => resp.json())
-      .then((json) => console.log(json));
-  }
+
   
   function handleDropdown(selection) {
     const vet = document.getElementById("vet-appts");
