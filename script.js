@@ -36,15 +36,15 @@
     const horseList = document.getElementById("barn-list");
     horses.forEach((horse) => {
       const li = document.createElement("li");
-      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}</p>`;
+      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}, ${horse.URL}</p>`;
       horseList.appendChild(li);
     });
   }
   
   function searchHorse(event) {
     event.preventDefault();
-    const searchValue = document.getElementById("search").value;
-    fetch(`http://localhost:3000/horses?name=${searchValue}`, {
+    const searchHorseValue = document.getElementById("search").value;
+    fetch(`http://localhost:3000/horses?name=${searchHorseValue}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -53,14 +53,32 @@
       .then((resp) => resp.json())
       .then((json) => displaySingleHorse(json[0]));
   }
+
+  function searchFarrier(event) {
+    event.preventDefault();
+    const searchFarrierValue = document.getElementById("search").value;
+    fetch(`http://localhost:3000/farriers?name=${searchFarrierValue}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((json) => displaySingleFarrier(json[0]));
+  }
   
   function displaySingleHorse(horseData) {
     const singleHorse = document.getElementById("horse-results");
-    singleHorse.innerHTML = `<p>Name: ${horseData.name}</p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p>`
+    singleHorse.innerHTML = `<p>Name: ${horseData.name} </p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p><img src="${horseData.URL}"></img>`
     // find a place on the page and create a new element and put the horse data into that element to display it
   }
 
-  
+  function displaySingleFarrier(farrierData) {
+    const singleFarrier = document.getElementById("farrier-results");
+    singleFarrier.innerHTML = `<p>Name: ${farrierData.name}</p><p>Specialty: ${farrierData.specialty}</p>`
+  }
+
+
   function handleDropdown(selection) {
     const vet = document.getElementById("vet-appts");
     vet.classList = "hidden";

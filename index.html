@@ -19,26 +19,7 @@
     <option value="farrier">Farrier</option>
   </select>
 
-<section>
-  <br>
-  <form id='barn-form'>
-    <input id='search' type='text' name='search'>
-    <input type='submit' name='submit'/>
-  </form>
-  <div id="horse-results">
-  </div>
-  <ul id="barn-list"> 
 
-  </ul>
-</section>
-
-<section>
-  <div id='result-form'>
-    <ul id='results-list'>
-    </ul>
-  </div>
-  
-</section>
   <section id="vet-appts" class="hidden">
     <h2>Announcements for Horse Owners</h2>
     <p>Upcoming Veterinary Appointments</p>
@@ -62,6 +43,31 @@
 
     <p></p>
   </section>
+
+
+<section>
+  <br>
+  <form id='barn-form'>
+    <input id='search' type='text' name='search'>
+    <input type='submit' name='submit'/>
+  </form>
+  <div id="farrier-results" class="farrier-results">
+  </div>
+  <div id="horse-results" class="horse-results">
+  </div>
+  <ul id="barn-list"> 
+
+  </ul>
+</section>
+
+<section>
+  <div id='result-form'>
+    <ul id='results-list'>
+    </ul>
+  </div>
+  
+</section>
+
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover
   page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
@@ -69,5 +75,14 @@
   -->
   <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
 </body>
+
+<style>
+    body {
+      background-image: url('https://s22657.pcdn.co/wp-content/uploads/2019/12/Wood1.jpg.webp');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
 
 </html>

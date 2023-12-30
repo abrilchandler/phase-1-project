@@ -1,7 +1,10 @@
 html {
+    color: whitesmoke;
     height: 100%;
     width: 100%;
+    text-align: center;
   }
+  
   
   .dropdown-content a {
     color: black;
@@ -16,4 +19,12 @@ html {
   
   .hidden {
     display: none
+  }
+
+  .horse-results {
+    display: 50%;
+  }
+
+  .farrier-results {
+    display: 50%;
   }

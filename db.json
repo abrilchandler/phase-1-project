@@ -3,36 +3,44 @@
       {
         "name": "Presley",
         "breed": "American Paint Horse",
-        "color": "white and brown"
+        "color": "White and Brown",
+        "URL" : "https://drive.google.com/file/d/1Xhp2_LigzjluLs0rwVxqm1BLVQem_eSv/view?usp=drive_link"
       },
       {
         "name": "George",
         "breed": "POA",
-        "color": "white speckled"
+        "color": "White Speckled",
+        "URL": "url"
+
       },
       {
         "name": "Santana",
         "breed": "American Paint Horse",
-        "color": "brown"
+        "color": "Brown",
+        "URL": "url"
       },
       {
         "name": "Franny",
         "breed": "POA",
-        "color": "red"
+        "color": "Red",
+        "URL": "https://drive.google.com/file/d/1U1U56q8rUAWJnVKpqNQKeG4dOaTW_OwR/view?usp=drive_link"
       }
     ],
     "farriers": [
       {
-        "name": "farrier1"
+        "name": "Farrier1",
+        "specialty": "Corrective Shoeing",
+        "rate": "$120 full set"
       },
       {
-        "name": "farrier2"
+        "name": "Farrier2",
+        "specialty": "Show Shoeing",
+        "rate": "$110 full set"
       },
       {
-        "name": "farrier3"
-      },
-      {
-        "name": "farrier4"
+        "name": "Farrier3",
+        "specialty": "Rodeo shoeing",
+        "rate": "$100 full set"
       }
     ]
   }
