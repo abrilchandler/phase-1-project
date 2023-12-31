@@ -1,7 +1,11 @@
 
   document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("barn-form");
-    form.addEventListener("submit", (event) => searchHorse(event));
+    const form1 = document.getElementById("horse-form");
+    form1.addEventListener("submit", (event) => searchHorse(event));
+
+    const form2 = document.getElementById("farrier-form");
+    form2.addEventListener("submit", (event) => searchFarrier(event));
+
     const dropdown = document.getElementById("myDropdown");
   
     document.addEventListener("change", () => handleDropdown(dropdown.value));
@@ -64,18 +68,18 @@
       },
     })
       .then((resp) => resp.json())
-      .then((json) => displaySingleFarrier(json[0]));
+      .then((json) => displaySingleFarrier(json));
   }
   
   function displaySingleHorse(horseData) {
     const singleHorse = document.getElementById("horse-results");
-    singleHorse.innerHTML = `<p>Name: ${horseData.name} </p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p><img src="${horseData.URL}"></img>`
+    singleHorse.innerHTML = `<p>Name: ${horseData.name}</p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p><img src="${horseData.URL}"></img>`
     // find a place on the page and create a new element and put the horse data into that element to display it
   }
 
   function displaySingleFarrier(farrierData) {
     const singleFarrier = document.getElementById("farrier-results");
-    singleFarrier.innerHTML = `<p>Name: ${farrierData.name}</p><p>Specialty: ${farrierData.specialty}</p>`
+    singleFarrier.innerHTML = `<p>Name: ${farrierData.name}</p><p>Specialty: ${farrierData.specialty}</p><p>Rate: ${farrierData.rate}</p>`
   }
 
 
