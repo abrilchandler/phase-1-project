@@ -45,7 +45,8 @@
       li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}, ${horse.URL}</p>`;
       horseList.appendChild(li);
     });
-  }
+}
+
   
   function searchHorse(event) {
     event.preventDefault();
