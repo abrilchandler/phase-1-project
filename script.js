@@ -3,8 +3,8 @@
     const form1 = document.getElementById("horse-form");
     form1.addEventListener("submit", (event) => searchHorse(event));
 
-    const form2 = document.getElementById("farrier-form");
-    form2.addEventListener("submit", (event) => searchFarrier(event));
+    const form2 = document.getElementById("trainer-form");
+    form2.addEventListener("submit", (event) => searchTrainer(event));
 
     const dropdown = document.getElementById("myDropdown");
   
@@ -47,7 +47,7 @@
   
   function searchHorse(event) {
     event.preventDefault();
-    const searchHorseValue = document.getElementById("search").value;
+    const searchHorseValue = document.getElementById("search1").value;
     fetch(`http://localhost:3000/horses?name=${searchHorseValue}`, {
       method: "GET",
       headers: {
@@ -58,17 +58,17 @@
       .then((json) => displaySingleHorse(json[0]));
   }
 
-  function searchFarrier(event) {
+  function searchTrainer(event) {
     event.preventDefault();
-    const searchFarrierValue = document.getElementById("search").value;
-    fetch(`http://localhost:3000/farriers?name=${searchFarrierValue}`, {
+    const searchTrainerValue = document.getElementById("search2").value;
+    fetch(`http://localhost:3000/trainers?name=${searchTrainerValue}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((resp) => resp.json())
-      .then((json) => displaySingleFarrier(json));
+      .then((json) => displaySingleTrainer(json[0]));
   }
   
   function displaySingleHorse(horseData) {
@@ -77,9 +77,9 @@
     // find a place on the page and create a new element and put the horse data into that element to display it
   }
 
-  function displaySingleFarrier(farrierData) {
-    const singleFarrier = document.getElementById("farrier-results");
-    singleFarrier.innerHTML = `<p>Name: ${farrierData.name}</p><p>Specialty: ${farrierData.specialty}</p><p>Rate: ${farrierData.rate}</p>`
+  function displaySingleTrainer(trainerData) {
+    const singleTrainer = document.getElementById("trainer-results");
+    singleTrainer.innerHTML = `<p>Name: ${trainerData.name}</p><p>Specialty: ${trainerData.specialty}</p><p>Rate: ${trainerData.rate}</p>`
   }
 
 

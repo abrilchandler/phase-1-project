@@ -12,7 +12,7 @@
 <body>
   <h1>Meet our Barn</h1>
 
-  <label for="dropdown">Important Dates</label>
+  <label for="myDropdown">Important Dates</label>
   <select id="myDropdown" name="dropdown" placeholder="Meet the Barn">
     <option value="" disabled selected>Select</option>
     <option value="vet">Vet</option>
@@ -21,24 +21,29 @@
 
 
   <section id="vet-appts" class="hidden">
-    <h2>Announcements for Horse Owners</h2>
-    <p>Upcoming Veterinary Appointments</p>
+    <h2>Upcoming Veterinary Appointments</h2>
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+        <li>January 29th, 2024</li>
+        <li>April 28th, 2024</li>
+        <li>July 29th, 2024</li>
+        <li>October 28th, 2024</li>
+        <li>December 15th, 2024</li>
     </ul>
   </section>
 
   <!-- wrap this part in a section with an id and give it the hidden class so we can reveal it based on dropdown activity -->
   <section id="farrier-appts" class="hidden">
-    <p>Upcoming Farrier Appointments</p>
+    <h3>Upcoming Farrier Appointments</h3>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>January 20th, 2024</li>
+      <li>March 9th, 2024</li>
+      <li>April 27th, 2024</li>
+      <li>June 15th, 2024</li>
+      <li>August 3rd, 2024</li>
+      <li>September 21st, 2024</li>
+      <li>November 9th, 2024</li>
+      <li>December 28th, 2024</li>
+       
       </ul>
 
     <p></p>
@@ -48,17 +53,17 @@
 <section>
   <br>
   <form id='horse-form'>Find your Horse
-    <input id='search' type='text' name='search'>
+    <input id='search1' type='text' name='search1'>
     <input type='submit' name='submit'/>
   </form>
   <div id="horse-results" class="horse-results">
   </div>
   <br>
-  <form id='farrier-form'>Find your Farrier
-    <input id='search' type='text' name='search'>
+  <form id='trainer-form'>Find your Trainer
+    <input id='search2' type='text' name='search2'>
     <input type='submit' name='submit'/>
   </form>
-  <div id="farrier-results" class="farrier-results">
+  <div id="trainer-results" class="trainer-results">
   </div>
   
   <ul id="barn-list"> 
@@ -84,11 +89,14 @@
 
 <style>
     body {
-      background-image: url('https://s22657.pcdn.co/wp-content/uploads/2019/12/Wood1.jpg.webp');
+      background-image: url('https://lp-cms-production.imgix.net/2019-06/eedff8bcef7031c7802957068090da9f-saguaro-national-park.jpg?auto=format&fit=crop&ar=1:1&q=75&w=1200');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100% 100%;
     }
     </style>
-
+<br>
+<br>
+<br>
+<br>
 </html>

@@ -4,43 +4,43 @@
         "name": "Presley",
         "breed": "American Paint Horse",
         "color": "White and Brown",
-        "URL" : "https://drive.google.com/file/d/1Xhp2_LigzjluLs0rwVxqm1BLVQem_eSv/view?usp=drive_link"
+        "URL" : "image_50732545.JPG"
       },
       {
         "name": "George",
         "breed": "POA",
         "color": "White Speckled",
-        "URL": "url"
+        "URL": "image_6483441 (1).JPG"
 
       },
       {
         "name": "Santana",
         "breed": "American Paint Horse",
         "color": "Brown",
-        "URL": "url"
+        "URL": "image_6483441 (2).JPG"
       },
       {
         "name": "Franny",
         "breed": "POA",
         "color": "Red",
-        "URL": "https://drive.google.com/file/d/1U1U56q8rUAWJnVKpqNQKeG4dOaTW_OwR/view?usp=drive_link"
+        "URL": "image_50725889.JPG"
       }
     ],
-    "farriers": [
+    "trainers": [
       {
-        "name": "Farrier1",
-        "specialty": "Corrective Shoeing",
-        "rate": "$120 full set"
+        "name": "Dustin",
+        "specialty": "Hunter/Jumper",
+        "rate": "$700/month"
       },
       {
-        "name": "Farrier2",
-        "specialty": "Show Shoeing",
-        "rate": "$110 full set"
+        "name": "Hunter",
+        "specialty": "Western Pleasure",
+        "rate": "$800/month"
       },
       {
-        "name": "Farrier3",
-        "specialty": "Rodeo shoeing",
-        "rate": "$100 full set"
+        "name": "Austin",
+        "specialty": "Ranch and Reining",
+        "rate": "$750/month"
       }
     ]
   }
