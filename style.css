@@ -5,7 +5,7 @@ html {
     text-align: center;
     font-weight: bold;
   }
-  
+
 img {
     width: 20%;
 }
@@ -35,4 +35,15 @@ img {
 
   .farrier-results {
     display: 50%;
+  }
+
+  #hover-image {
+    width: 70%;
+    outline-style: outset;
+    outline-color: whitesmoke;
+    outline-width: 15px;
+  }
+
+  #services-button {
+    position: static;
   }

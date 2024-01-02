@@ -9,8 +9,10 @@
     const dropdown = document.getElementById("myDropdown");
   
     document.addEventListener("change", () => handleDropdown(dropdown.value));
+
+    
   });
-  
+
   function searchBarn(event) {
     event.preventDefault();
   
@@ -105,3 +107,8 @@
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
+
+  function displayText() {
+    const text = document.getElementById("servicesText");
+    text.style.display = "block";
+  }
