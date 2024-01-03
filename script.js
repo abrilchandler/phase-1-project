@@ -10,6 +10,8 @@
   
     document.addEventListener("change", () => handleDropdown(dropdown.value));
 
+    const serviceButton = document.getElementsByClassName("services-button");
+    serviceButton.addEventListener("click", () => displayText())
     
   });
 
