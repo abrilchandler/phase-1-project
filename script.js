@@ -10,7 +10,7 @@
   
     document.addEventListener("change", () => handleDropdown(dropdown.value));
 
-    const serviceButton = document.getElementById("services-button");
+    const serviceButton = document.querySelector(".services-button");
     serviceButton.addEventListener("click", () => displayText())
     
   });

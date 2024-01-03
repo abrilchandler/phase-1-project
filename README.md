@@ -3,7 +3,7 @@
 to run the json server: `json-server --watch db.json`
 
 ## Usage
-The Pahse 1 Project is meant to be part of a larger project I am working on throughout the Flatiron Bootcamp. This has served as a great first step into identifying what will be useful going forward and what areas I can devote more time to studying in order to improve the user experience. 
+The Phase 1 Project is meant to be part of a larger project I am working on throughout the Flatiron Bootcamp. This has served as a great first step into identifying what will be useful going forward and what areas I can devote more time to studying in order to improve the user experience. 
 
 ## Purpose
 The purpose of this page will be part of a larger Barn Manager App or Website. This page allows you to search for the horses that are boarded at the facility and search for the trainers that work out of this facility.
@@ -21,4 +21,4 @@ In the Find your Trainer search bar, search for trainers in the barn located in 
 
 We can utilize Important Dates dropdown menu to explore the vet and farrier scheduled dates for the year.
 
-We have button to display the services the barn offers as well.
+We have a button with an event listener to display the services the barn offers as well.
