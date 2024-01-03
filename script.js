@@ -42,7 +42,7 @@
     const horseList = document.getElementById("barn-list");
     horses.forEach((horse) => {
       const li = document.createElement("li");
-      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}, ${horse.URL}</p>`;
+      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}, ${horse.URL}, ${horse.awards}</p>`;
       horseList.appendChild(li);
     });
 }
@@ -76,7 +76,7 @@
   
   function displaySingleHorse(horseData) {
     const singleHorse = document.getElementById("horse-results");
-    singleHorse.innerHTML = `<p>Name: ${horseData.name}</p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p><img src="${horseData.URL}"></img>`
+    singleHorse.innerHTML = `<p>Name: ${horseData.name}</p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p><img src="${horseData.URL}"></img><p>Awards: ${horseData.awards}`
     // find a place on the page and create a new element and put the horse data into that element to display it
   }
 

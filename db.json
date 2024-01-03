@@ -4,26 +4,29 @@
         "name": "Presley",
         "breed": "American Paint Horse",
         "color": "White and Brown",
-        "URL" : "image_50732545.JPG"
+        "URL" : "image_50732545.JPG",
+        "awards": ""
       },
       {
         "name": "George",
         "breed": "POA",
         "color": "White Speckled",
-        "URL": "image_6483441 (1).JPG"
-
+        "URL": "image_6483441 (1).JPG",
+        "awards": ""
       },
       {
         "name": "Santana",
         "breed": "American Paint Horse",
         "color": "Brown",
-        "URL": "image_6483441 (2).JPG"
+        "URL": "image_6483441 (2).JPG",
+        "awards": ""
       },
       {
         "name": "Franny",
         "breed": "POA",
         "color": "Red",
-        "URL": "image_50725889.JPG"
+        "URL": "image_50725889.JPG",
+        "awards": ""
       }
     ],
     "trainers": [
