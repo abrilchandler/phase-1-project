@@ -7,6 +7,7 @@ The Pahse 1 Project is meant to be part of a larger project I am working on thro
 
 ## Purpose
 The purpose of this page will be part of a larger Barn Manager App or Website. This page allows you to search for the horses that are boarded at the facility and search for the trainers that work out of this facility.
+
 ## Project Requirements
 My 3 event listeners are the dropdown menu, the search bars and the button. 
 
