@@ -2,7 +2,7 @@
 
 to run the json server: `json-server --watch db.json`
 
-## Usage
+## Introduction
 The Phase 1 Project is meant to be part of a larger project I am working on throughout the Flatiron Bootcamp. This has served as a great first step into identifying what will be useful going forward and what areas I can devote more time to studying in order to improve the user experience. 
 
 ## Purpose
