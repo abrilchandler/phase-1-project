@@ -16,8 +16,8 @@
     const barnButton = document.getElementById("barn-occupants");
     barnButton.addEventListener("click", () => {
     searchBarn()
-    displayBarnTrainers()
-   })
+    // displayBarnTrainers()
+   }, {once : true});
   });
 
   function searchBarn() {
@@ -39,21 +39,20 @@
   function displayBarn(horses) {
     const horseList = document.getElementById("barn-horses");
     horses.forEach((horse) => {
-      const li = document.createElement("li");
-      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed},</p><img src="${horse.URL}"</img>, ${horse.awards}</p>`;
-      horseList.appendChild(li);
+      const ul = document.createElement("ul");
+      ul.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}</p> <img src="${horse.URL}"</img> <p> ${horse.awards}</p>`;
+      horseList.appendChild(ul);
     });
 }
 
-   function displayBarnTrainers(trainers) {
+  /* function displayBarnTrainers(trainers) {
     const trainerList = document.getElementById("barn-occupants");
     trainers.forEach((trainer) => {
         const li = document.createElement("li");
         li.innerHTML = `<p>${trainer.name}, ${trainer.specialty}, ${trainer.rate}</p>`;
         trainerList.appendChild(li);
     })
-   }
-
+   }*/
   
   function searchHorse(event) {
     event.preventDefault();
