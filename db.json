@@ -41,6 +41,11 @@
         "name": "Austin",
         "specialty": "Ranch and Reining",
         "rate": "$750/month"
+      },
+      {
+        "name": "John",
+        "specialty": "All-Around/Head Trainer",
+        "rate": "$850/month"
       }
     ]
   }
