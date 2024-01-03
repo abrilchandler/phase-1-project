@@ -14,12 +14,13 @@
     serviceButton.addEventListener("click", () => displayText());
     
     const barnButton = document.getElementById("barn-occupants");
-    barnButton.addEventListener("click", () => displayBarn(), displayBarnTrainers());
+    barnButton.addEventListener("click", () => {
+    searchBarn()
+    displayBarnTrainers()
+   })
   });
 
-  function searchBarn(event) {
-    event.preventDefault();
-  
+  function searchBarn() {
     fetch(
       `http://localhost:3000/horses`,
       {
@@ -31,22 +32,15 @@
       },
     )
       .then((resp) => resp.json())
-      .then((json) => {
-        const horseList = document.getElementById("results-list");
-        horseList.innerHTML = "";
-        console.log(json)
-        displayBarn(json);
-        console.log(horseList)
-        const form = document.getElementById("result-form");
-        form.reset();
-      });
-  }
+      .then((json) => displayBarn(json));
+        
+      };
   
   function displayBarn(horses) {
-    const horseList = document.getElementById("barn-occupants");
+    const horseList = document.getElementById("barn-horses");
     horses.forEach((horse) => {
       const li = document.createElement("li");
-      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}, ${horse.URL}, ${horse.awards}</p>`;
+      li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed},</p><img src="${horse.URL}"</img>, ${horse.awards}</p>`;
       horseList.appendChild(li);
     });
 }
