@@ -14,7 +14,7 @@
     serviceButton.addEventListener("click", () => displayText());
     
     const barnButton = document.getElementById("barn-occupants");
-    barnButton.addEventListener("click", () => displayHorsesAndTrainers());
+    barnButton.addEventListener("click", () => displayBarn(), displayBarnTrainers());
   });
 
   function searchBarn(event) {
@@ -43,13 +43,22 @@
   }
   
   function displayBarn(horses) {
-    const horseList = document.getElementById("barn-list");
+    const horseList = document.getElementById("barn-occupants");
     horses.forEach((horse) => {
       const li = document.createElement("li");
       li.innerHTML = `<p>${horse.name}, ${horse.color}, ${horse.breed}, ${horse.URL}, ${horse.awards}</p>`;
       horseList.appendChild(li);
     });
 }
+
+   function displayBarnTrainers(trainers) {
+    const trainerList = document.getElementById("barn-occupants");
+    trainers.forEach((trainer) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<p>${trainer.name}, ${trainer.specialty}, ${trainer.rate}</p>`;
+        trainerList.appendChild(li);
+    })
+   }
 
   
   function searchHorse(event) {
@@ -117,22 +126,3 @@
     const text = document.getElementById("servicesText");
     text.style.display = "block";
   }
-
-  function displayHorsesAndTrainers(horseData, trainerData) {
-    const horsesAndTrainers = document.getElementById("barn-occupants");
-    horsesAndTrainers.innerHTML = `<p>Name: ${horseData.name}</p><p>Breed: ${horseData.breed}</p><p>Color: ${horseData.color}</p><img src="${horseData.URL}"></img><p>Awards: ${horseData.awards}
-    <br><p>Name: ${trainerData.name}</p><p>Specialty: ${trainerData.specialty}</p><p>Rate: ${trainerData.rate}</p>`
-  }
-
-  function displayEntireBarn(event) {
-    event.preventDefault();
-    fetch(`http://localhost:3000`, {
-        method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((json) => displayHorsesAndTrainers(json));
-    }
-  
