@@ -19,7 +19,8 @@ In the Find your Horse search bar, we can search for horses in the barn located 
 
 In the Find your Trainer search bar, search for trainers in the barn located in the db.json (Dustin, Austin, Hunter, John).
 
-We can utilize Important Dates dropdown menu to explore the vet and farrier scheduled dates for the year.
+I can utilize Important Dates dropdown menu to explore the vet and farrier scheduled dates for the year.
 
-We have a button with an event listener to display the services the barn offers as well.
+I have a button with an event listener to display the services the barn offers as well.
 
+I also have a button utilizing a forEach array iteration method in order to display all the horses in the barn.

@@ -1,4 +1,4 @@
-html {
+head, body {
     color: white;
     height: 100%;
     width: 100%;
@@ -37,13 +37,7 @@ img {
     display: 50%;
   }
 
-  #hover-image {
-    width: 70%;
-    outline-style: outset;
-    outline-color: whitesmoke;
-    outline-width: 15px;
-  }
-
   button {
-    align-content: center;
+    margin: auto;
   }
+ 
