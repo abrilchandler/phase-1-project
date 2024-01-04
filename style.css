@@ -44,6 +44,6 @@ img {
     outline-width: 15px;
   }
 
-  #services-button {
-    position: static;
+  button {
+    align-content: center;
   }

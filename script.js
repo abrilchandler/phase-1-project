@@ -16,7 +16,6 @@
     const barnButton = document.getElementById("barn-occupants");
     barnButton.addEventListener("click", () => {
     searchBarn()
-    // displayBarnTrainers()
    }, {once : true});
   });
 
@@ -44,15 +43,6 @@
       horseList.appendChild(ul);
     });
 }
-
-  /* function displayBarnTrainers(trainers) {
-    const trainerList = document.getElementById("barn-occupants");
-    trainers.forEach((trainer) => {
-        const li = document.createElement("li");
-        li.innerHTML = `<p>${trainer.name}, ${trainer.specialty}, ${trainer.rate}</p>`;
-        trainerList.appendChild(li);
-    })
-   }*/
   
   function searchHorse(event) {
     event.preventDefault();
