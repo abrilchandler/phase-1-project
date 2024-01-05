@@ -11,16 +11,16 @@ The purpose of this page will be part of a larger Barn Manager App or Website. T
 ## Project Requirements
 My 3 different event listeners are the dropdown menu, the search bars and the button. 
 
-My 'db.json' has 4 objects wth 5 attributes each, and another 4 objects with 3 attributes each.
+My `db.json`` has 4 objects wth 5 attributes each, and another 4 objects with 3 attributes each.
 
-My project uses a 'forEach' array iteration to display the searched for horses
+My project uses a `forEach` array iteration to display the searched for horses
 
 In the Find your Horse search bar, we can search for horses in the barn located in the 'db.json' (Presley, George, Franny, Santana).
 
-In the Find your Trainer search bar, search for trainers in the barn located in the 'db.json' (Dustin, Austin, Hunter, John).
+In the Find your Trainer search bar, search for trainers in the barn located in the `db.json` (Dustin, Austin, Hunter, John).
 
-I can utilize Important Dates 'dropdown' menu to explore the vet and farrier scheduled dates for the year.
+I can utilize Important Dates `dropdown` menu to explore the vet and farrier scheduled dates for the year.
 
-I have a Services We Offer button with an 'event listener' to display the services the barn offers as well.
+I have a Services We Offer button with an `event listener` to display the services the barn offers as well.
 
-I also have the Meet all the Horses button utilizing a 'forEach' array iteration method in order to display all the horses in the barn.
+I also have the Meet all the Horses button utilizing a `forEach` array iteration method in order to display all the horses in the barn.
